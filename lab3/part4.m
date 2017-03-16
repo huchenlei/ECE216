@@ -10,7 +10,7 @@ ttls_array = {'G', 1; 'G', 1; 'G', 1; 'G', 1;
 song = get_song_wave(ttls_array, beat_duration ,fs);
 ADSR_song = ADSR_env(song, beat_duration, 4, fs);
 
-% soundsc(ADSR_song, fs);
+soundsc(ADSR_song, fs);
 
 spectrogram(ADSR_song,[],[],[], fs);
 colorbar;
